@@ -6,11 +6,11 @@
 // config files
 
 // default settings
-#define DEFAULT_SSID		"NerdMinerAP"
-#define DEFAULT_WIFIPW		"MineYourCoins"
+#define DEFAULT_SSID		"FranMinerAP"
+#define DEFAULT_WIFIPW		"MinarMonedas"
 #define DEFAULT_POOLURL		"public-pool.io"
 #define DEFAULT_POOLPASS	"x"
-#define DEFAULT_WALLETID	"yourBtcAddress"
+#define DEFAULT_WALLETID	"yourCPTSAddress"
 #define DEFAULT_POOLPORT	21496
 #define DEFAULT_TIMEZONE	2
 #define DEFAULT_SAVESTATS	false
