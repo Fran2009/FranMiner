@@ -6,7 +6,7 @@
 // config files
 
 // default settings
-#define DEFAULT_SSID		"FranMinerAP"
+#define DEFAULT_SSID		"PesetaMinerAP"
 #define DEFAULT_WIFIPW		"MinarMonedas"
 #define DEFAULT_POOLURL		"public-pool.io"
 #define DEFAULT_POOLPASS	"x"

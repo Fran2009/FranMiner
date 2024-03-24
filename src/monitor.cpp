@@ -152,7 +152,8 @@ String getBTCprice(void){
 
             DynamicJsonDocument doc(1024);
             deserializeJson(doc, payload);
-            if (doc.containsKey("last_trade_price")) bitcoin_price = doc["last_trade_price"];
+            //if (doc.containsKey("last_trade_price")) bitcoin_price = doc["last_trade_price"];
+            if (doc.containsKey("USD")) bitcoin_price = doc["USD"];
 
             doc.clear();
 
@@ -252,6 +253,7 @@ mining_data getMiningData(unsigned long mElapsed)
   data.valids = valids;
   data.temp = String(temperatureRead(), 0);
   data.currentTime = getTime();
+  data.btcPrice = getBTCprice();
 
   return data;
 }

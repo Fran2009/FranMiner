@@ -69,16 +69,19 @@ void tDisplay_MinerScreen(unsigned long mElapsed)
 
   render.rdrawString(data.currentHashRate.c_str(), 118, 114, TFT_BLACK);
   // Total hashes
-  render.setFontSize(18);
-  render.rdrawString(data.totalMHashes.c_str(), 268, 138, TFT_BLACK);
+  /*render.setFontSize(18);
+  render.rdrawString(data.totalMHashes.c_str(), 268, 138, TFT_BLACK);*/
   // Block templates
   render.setFontSize(18);
   render.drawString(data.templates.c_str(), 186, 20, 0xDEDB);
   // Best diff
   render.drawString(data.bestDiff.c_str(), 186, 48, 0xDEDB);
   // 32Bit shares
+  /*render.setFontSize(18);
+  render.drawString(data.completedShares.c_str(), 186, 76, 0xDEDB);*/
+  // Total hashes
   render.setFontSize(18);
-  render.drawString(data.completedShares.c_str(), 186, 76, 0xDEDB);
+  render.drawString(data.totalMHashes.c_str(), 186, 76, 0xDEDB);
   // Hores
   render.setFontSize(14);
   render.rdrawString(data.timeMining.c_str(), 315, 104, 0xDEDB);
@@ -98,6 +101,13 @@ void tDisplay_MinerScreen(unsigned long mElapsed)
   render.setFontSize(10);
   render.rdrawString(data.currentTime.c_str(), 286, 1, TFT_BLACK);
 
+  // Print BTC Price
+  background.setFreeFont(FSSB9);
+  background.setTextSize(2);
+  background.setTextDatum(TL_DATUM);
+  background.setTextColor(TFT_BLACK);
+  background.drawString(data.btcPrice.c_str(), 186, 138, GFXFF);
+
   // Push prepared background to screen
   background.pushSprite(0, 0);
 }
@@ -112,7 +122,7 @@ void tDisplay_ClockScreen(unsigned long mElapsed)
   Serial.printf(">>> Completed %s share(s), %s Khashes, avg. hashrate %s KH/s\n",
                 data.completedShares.c_str(), data.totalKHashes.c_str(), data.currentHashRate.c_str());
 
-  // Hashrate
+// Hashrate
   render.setFontSize(25);
   render.setCursor(19, 122);
   render.setFontColor(TFT_BLACK);

@@ -13,7 +13,8 @@
 #define UPDATE_PERIOD_h   5
 
 //API BTC price
-#define getBTCAPI "https://api.blockchain.com/v3/exchange/tickers/BTC-USD"
+//#define getBTCAPI "https://api.blockchain.com/v3/exchange/tickers/BTC-USD"
+#define getBTCAPI "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD&tsyms=EUR"
 #define UPDATE_BTC_min   1
 
 //API Block height
@@ -67,6 +68,7 @@ typedef struct {
   String valids;
   String temp;
   String currentTime;
+  String btcPrice;
 }mining_data;
 
 typedef struct {
